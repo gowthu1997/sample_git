@@ -1,0 +1,24 @@
+name: Run script
+
+on:
+  push:
+    branches:
+      - main  
+
+jobs:
+  run_script:
+    runs-on: ubuntu-latest  
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+   
+      - name: Install dependencies
+        run: pip install boto3  
+
+      - name: Run Boto3 session
+        run: |
+          python main.py 
