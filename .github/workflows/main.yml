@@ -17,7 +17,7 @@ jobs:
         uses: actions/setup-python@v2
    
       - name: Install dependencies
-        run: pip install mysql.connector  
+        run: pip install pyarrow fastavro seaborn scikit-learn matplotlib pandas  
 
       - name: Run Python session
         run: |
