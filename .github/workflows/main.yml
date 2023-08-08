@@ -17,7 +17,7 @@ jobs:
         uses: actions/setup-python@v2
    
       - name: Install dependencies
-        run: pip install pandas  
+        run: pip install mysql.connector  
 
       - name: Run Python session
         run: |
